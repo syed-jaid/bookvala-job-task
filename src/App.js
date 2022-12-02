@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Select from 'react-select';
+
 
 function App() {
+  const options = [
+    { value: 'Ocean', color: 'Ocean' },
+    { value: 'strawberry', color: 'Strawberry' },
+    { value: 'vanilla', color: 'Vanilla' }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Welcome to React Asycn Selector</h3>
+      <div><Select
+        closeMenuOnSelect={false}
+        isMulti
+        options={options}
+      /></div>
     </div>
   );
 }
